@@ -1,0 +1,362 @@
+:root {
+  --bg: #07111f;
+  --bg-2: #0e1f39;
+  --card: rgba(7, 17, 31, 0.72);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --text: #f5f7fb;
+  --muted: #b6c1d3;
+  --facebook: linear-gradient(135deg, #1877f2, #45a3ff);
+  --tiktok: linear-gradient(135deg, #141414, #343434);
+  --telegram: linear-gradient(135deg, #229ed9, #60c8ff);
+  --shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Sora", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(35, 158, 217, 0.28), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(24, 119, 242, 0.22), transparent 26%),
+    radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.08), transparent 28%),
+    linear-gradient(155deg, var(--bg), var(--bg-2));
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 18px;
+}
+
+.layout {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1320px);
+  display: grid;
+  grid-template-columns: minmax(340px, 430px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.orb {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.orb-left {
+  top: 8%;
+  left: -80px;
+  background: linear-gradient(135deg, #1877f2, transparent);
+}
+
+.orb-right {
+  right: -70px;
+  bottom: 6%;
+  background: linear-gradient(135deg, #229ed9, transparent);
+}
+
+.profile-card {
+  padding: 34px 26px 28px;
+  border: 1px solid var(--card-border);
+  border-radius: 32px;
+  background: var(--card);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: #7dc4ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.avatar-ring {
+  width: 124px;
+  height: 124px;
+  margin-bottom: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(24, 119, 242, 0.95), rgba(96, 200, 255, 0.4));
+  box-shadow: 0 16px 40px rgba(24, 119, 242, 0.28);
+  padding: 4px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.12);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.05;
+}
+
+.intro {
+  margin: 14px 0 22px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.stat {
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.stat strong,
+.stat span {
+  display: block;
+}
+
+.stat strong {
+  margin-bottom: 5px;
+  font-size: 1.15rem;
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.links {
+  display: grid;
+  gap: 14px;
+}
+
+.social-card {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 24px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 22px 38px rgba(0, 0, 0, 0.24);
+}
+
+.facebook {
+  background: var(--facebook);
+}
+
+.tiktok {
+  background: var(--tiktok);
+}
+
+.telegram {
+  background: var(--telegram);
+}
+
+.social-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.social-icon i {
+  line-height: 1;
+}
+
+.social-copy strong,
+.social-copy small {
+  display: block;
+}
+
+.social-copy strong {
+  font-size: 1rem;
+}
+
+.social-copy small {
+  margin-top: 4px;
+  opacity: 0.86;
+  font-size: 0.8rem;
+  word-break: break-word;
+}
+
+.arrow {
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  opacity: 0.92;
+}
+
+.footer-text {
+  margin: 20px 0 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.88rem;
+}
+
+.market-panel {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 18px;
+  padding: 28px 24px 24px;
+  border: 1px solid var(--card-border);
+  border-radius: 32px;
+  background: rgba(8, 18, 34, 0.76);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+  min-height: 760px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.panel-header h2 {
+  margin: 8px 0 0;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.live-pill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(125, 196, 255, 0.12);
+  border: 1px solid rgba(125, 196, 255, 0.18);
+  color: #9fd5ff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.panel-copy {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.quote-card,
+.chart-card {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chart-card {
+  min-height: 430px;
+}
+
+.panel-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.panel-title-row strong {
+  font-size: 1rem;
+}
+
+.panel-title-row span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.quote-widget {
+  min-height: 140px;
+}
+
+.chart-widget {
+  min-height: 100%;
+  height: 100%;
+}
+
+.tradingview-widget-container,
+.tradingview-widget-container__widget {
+  width: 100%;
+}
+
+.chart-widget .tradingview-widget-container__widget,
+.chart-widget iframe {
+  min-height: 360px !important;
+}
+
+@media (max-width: 520px) {
+  .profile-card {
+    padding: 28px 18px 22px;
+  }
+
+  .social-card {
+    grid-template-columns: 52px 1fr auto;
+    padding: 14px;
+  }
+
+  .social-icon {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .market-panel {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .market-panel,
+  .profile-card {
+    padding: 24px 18px 20px;
+  }
+
+  .panel-header,
+  .panel-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

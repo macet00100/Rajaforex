@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raja Trading Bio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="hero">
+    <div class="orb orb-left"></div>
+    <div class="orb orb-right"></div>
+
+    <div class="layout">
+      <section class="profile-card">
+        <p class="eyebrow">RAJA TRADING</p>
+        <div class="avatar-ring">
+          <img class="avatar" src="avatar.png" alt="Raja Trading avatar">
+        </div>
+
+        <h1>Raja Trading XAU</h1>
+        <p class="intro">
+          Follow the official channels and stay close to the Raja trading community.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>24/7</strong>
+            <span>Online Access</span>
+          </div>
+          <div class="stat">
+            <strong>3</strong>
+            <span>Official Links</span>
+          </div>
+        </div>
+
+        <div class="links">
+          <a class="social-card facebook" href="https://www.facebook.com/rajaonlyfx" target="_blank" rel="noreferrer">
+            <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></span>
+            <span class="social-copy">
+              <strong>Facebook</strong>
+              <small>facebook.com/rajaonlyfx</small>
+            </span>
+            <span class="arrow">Open</span>
+          </a>
+
+          <a class="social-card tiktok" href="https://www.tiktok.com/@rajatradingxau" target="_blank" rel="noreferrer">
+            <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></span>
+            <span class="social-copy">
+              <strong>TikTok</strong>
+              <small>@rajatradingxau</small>
+            </span>
+            <span class="arrow">Open</span>
+          </a>
+
+          <a class="social-card telegram" href="https://t.me/Rajatrading_fx" target="_blank" rel="noreferrer">
+            <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-telegram"></i></span>
+            <span class="social-copy">
+              <strong>Telegram</strong>
+              <small>@Rajatrading_fx</small>
+            </span>
+            <span class="arrow">Open</span>
+          </a>
+        </div>
+
+        <p class="footer-text">Fast links. Clean profile. Ready to share.</p>
+      </section>
+
+      <aside class="market-panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">LIVE GOLD PANEL</p>
+            <h2>XAUUSD Market</h2>
+          </div>
+          <span class="live-pill">Live via TradingView</span>
+        </div>
+
+        <p class="panel-copy">
+          Real-time XAUUSD widget using the OANDA symbol feed, displayed directly from TradingView.
+        </p>
+
+        <section class="quote-card">
+          <div class="panel-title-row">
+            <strong>Current Gold Price</strong>
+            <span>OANDA:XAUUSD</span>
+          </div>
+          <div class="tradingview-widget-container quote-widget">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js" async>
+            {
+              "symbol": "OANDA:XAUUSD",
+              "width": "100%",
+              "locale": "en",
+              "colorTheme": "dark",
+              "isTransparent": true
+            }
+            </script>
+          </div>
+        </section>
+
+        <section class="chart-card">
+          <div class="panel-title-row">
+            <strong>XAUUSD Chart</strong>
+            <span>15m / OANDA Feed</span>
+          </div>
+          <div class="tradingview-widget-container chart-widget">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+              "autosize": true,
+              "symbol": "OANDA:XAUUSD",
+              "interval": "15",
+              "timezone": "Asia/Ho_Chi_Minh",
+              "theme": "dark",
+              "style": "1",
+              "locale": "en",
+              "allow_symbol_change": false,
+              "calendar": false,
+              "support_host": "https://www.tradingview.com"
+            }
+            </script>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
