@@ -5,6 +5,7 @@
   --card-border: rgba(255, 255, 255, 0.12);
   --text: #f5f7fb;
   --muted: #b6c1d3;
+  --youtube: linear-gradient(135deg, #ff0033, #ff4d4d);
   --facebook: linear-gradient(135deg, #1877f2, #45a3ff);
   --tiktok: linear-gradient(135deg, #141414, #343434);
   --telegram: linear-gradient(135deg, #229ed9, #60c8ff);
@@ -169,6 +170,10 @@ h1 {
 .social-card:hover {
   transform: translateY(-5px) scale(1.01);
   box-shadow: 0 22px 38px rgba(0, 0, 0, 0.24);
+}
+
+.youtube {
+  background: var(--youtube);
 }
 
 .facebook {
